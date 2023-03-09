@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buttonSearch"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.google.android.gms.maps.MapView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerViewNav"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="307dp"
+        android:visibility="visible" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerViewWhere"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-2dp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonWhereNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="570dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/circle_shape_btn"
+        android:backgroundTint="#FFFFFF"
+        android:text="Where to?"
+        android:textColor="#000000"
+        app:icon="@drawable/ic_baseline_search"
+        app:iconTint="#000000"
+        tools:layout="@layout/places_autocomplete_fragment" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_person_24"
+        tools:srcCompat="@drawable/ic_baseline_person_24" />
+
+
+</RelativeLayout>

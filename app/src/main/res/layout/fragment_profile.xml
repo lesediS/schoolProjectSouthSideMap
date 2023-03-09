@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".profileFragments.profileFragment">
+
+
+    <FrameLayout
+        android:id="@+id/framelayoutprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="28dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/ic_baseline_person_24"
+            tools:ignore="MissingClass" />
+
+        <TextView
+            android:id="@+id/profileNameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="60dp"
+            android:text="Jane Doe"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/aboutTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="100dp"
+            android:text="Experienced Traveller"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/phoneTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="160dp"
+            android:drawableLeft="@drawable/ic_baseline_phone_24"
+            android:onClick="replaceWithEdit"
+            android:text="  012-345-6789"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/emailTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="190dp"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:onClick="replaceWithEdit"
+            android:text="  janedoe@fakeemail.com"
+            android:textSize="20dp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/framelayoutpoints"
+        android:layout_width="match_parent"
+        android:layout_height="186dp"
+        android:layout_above="@+id/clickablesLayout"
+        android:layout_below="@+id/framelayoutprofile"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="-30dp">
+
+        <TextView
+            android:id="@+id/points2Txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="175dp"
+            android:layout_marginTop="70dp"
+            android:text="Points"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/pointsTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="637"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/clickablesLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="189dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="54dp">
+
+        <!--TODO: Create method going to favourites page-->
+        <TextView
+            android:id="@+id/favouritesTxt"
+            android:layout_width="271dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="125dp"
+            android:drawableLeft="@drawable/ic_baseline_favorite_border_24"
+            android:gravity="center_vertical"
+            android:onClick="replaceWithFavourites"
+            android:text="  My Favourites"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/shareTxt"
+            android:layout_width="270dp"
+            android:layout_height="41dp"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="80dp"
+            android:drawableLeft="@drawable/ic_baseline_share_24"
+            android:gravity="center_vertical"
+            android:text="  Share with a friend"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/settingsTxt"
+            android:layout_width="206dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="76dp"
+            android:drawableLeft="@drawable/ic_settings"
+            android:gravity="center_vertical"
+            android:text=" Settings"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/imageButtonBackProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:src="@drawable/ic_back" />
+
+</RelativeLayout>
